@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
      Reveal-on-scroll for cards
   ----------------------------------------------------------- */
   var revealTargets = document.querySelectorAll(
-    '.focus-card, .skill-card, .project-card, .cert-card, .contact-card, .education-card'
+    '.skill-card, .project-card, .cert-card, .contact-card, .education-card, .academic-card'
   );
 
   if (revealTargets.length && 'IntersectionObserver' in window) {

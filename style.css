@@ -297,6 +297,13 @@ button:focus-visible,
   border-radius: 4px;
   font-size: 0.68rem;
 }
+.hero-name {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  margin: 0 0 10px;
+}
 .hero-title {
   font-size: clamp(1.9rem, 4vw, 2.9rem);
   font-weight: 600;
@@ -318,7 +325,8 @@ button:focus-visible,
 .hero-social {
   margin-top: 28px;
   display: flex;
-  gap: 18px;
+  flex-wrap: wrap;
+  gap: 10px 20px;
 }
 .social-link {
   display: inline-flex;
@@ -423,35 +431,6 @@ button:focus-visible,
 .about-grid { display: grid; gap: 20px; max-width: 82ch; }
 .about-text { color: var(--text-muted); font-size: 1rem; }
 
-/* Career focus */
-.focus-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 18px;
-  margin-top: 10px;
-}
-.focus-card {
-  background: var(--panel);
-  border: 1px solid var(--panel-border);
-  border-radius: var(--radius);
-  padding: 24px 20px;
-  transition: border-color 0.2s ease, transform 0.2s ease;
-}
-.focus-card:hover { border-color: var(--accent); transform: translateY(-3px); }
-.focus-tag {
-  font-family: var(--font-display);
-  color: var(--accent);
-  font-size: 0.75rem;
-}
-.focus-card h3 {
-  font-size: 1rem;
-  margin: 10px 0 8px;
-}
-.focus-card p {
-  color: var(--text-muted);
-  font-size: 0.88rem;
-}
-
 /* Skills */
 .skills-grid {
   display: grid;
@@ -471,29 +450,23 @@ button:focus-visible,
   padding-bottom: 12px;
   border-bottom: 1px solid var(--panel-border);
 }
-.skill-list li {
+.chip-list {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  font-size: 0.86rem;
-  padding: 9px 0;
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.06);
+  flex-wrap: wrap;
+  gap: 8px;
 }
-.skill-list li:last-child { border-bottom: none; }
-.level {
+.chip-list li {
   font-family: var(--font-display);
-  font-size: 0.64rem;
-  letter-spacing: 0.03em;
-  padding: 3px 8px;
+  font-size: 0.72rem;
+  letter-spacing: 0.01em;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--panel-border);
+  padding: 6px 11px;
   border-radius: 20px;
-  white-space: nowrap;
-  flex-shrink: 0;
+  transition: border-color 0.2s ease, color 0.2s ease;
 }
-.level--fundamentals { background: rgba(139, 152, 165, 0.14); color: var(--text-muted); }
-.level--hands-on { background: var(--accent-soft); color: var(--accent-strong); }
-.level--working { background: rgba(167, 139, 250, 0.14); color: #c4b5fd; }
-.level--strong { background: var(--ok-soft); color: var(--ok); }
+.chip-list li:hover { border-color: var(--accent); color: var(--accent-strong); }
 
 /* Projects */
 .projects-grid {
@@ -536,7 +509,26 @@ button:focus-visible,
   padding-left: 12px;
 }
 .project-learned strong { color: var(--text); }
+.project-objective {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  border-left: 2px solid var(--panel-border);
+  padding-left: 12px;
+}
+.project-objective strong { color: var(--text); }
 .project-actions { margin-top: auto; padding-top: 6px; display: flex; gap: 10px; }
+.project-card--compact { padding: 22px; gap: 12px; }
+.project-card--compact .project-head h3 { font-size: 0.92rem; }
+.project-card--compact .project-desc { font-size: 0.84rem; }
+
+.inline-link {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: rgba(56, 189, 248, 0.4);
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+.inline-link:hover { color: var(--accent-strong); }
 
 /* Certifications */
 .cert-grid {
@@ -561,6 +553,7 @@ button:focus-visible,
 }
 .cert-status--progress { background: var(--warn-soft); color: var(--warn); }
 .cert-status--learning { background: rgba(167, 139, 250, 0.14); color: #c4b5fd; }
+.cert-status--completed { background: var(--ok-soft); color: var(--ok); }
 .cert-card h3 { font-size: 0.95rem; margin-bottom: 8px; }
 .cert-card p { color: var(--text-muted); font-size: 0.85rem; }
 
@@ -610,6 +603,25 @@ button:focus-visible,
 .education-degree { font-weight: 600; margin-bottom: 6px; }
 .education-school { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 4px; }
 .education-year { color: var(--text-muted); font-size: 0.82rem; font-family: var(--font-display); }
+
+.academic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.academic-card {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+}
+.academic-card h4 {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  margin: 0 0 8px;
+  color: var(--text);
+}
+.academic-card p { color: var(--text-muted); font-size: 0.82rem; }
 
 /* Resume */
 .resume-inner { text-align: left; }

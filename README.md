@@ -1,10 +1,9 @@
-# Farooq Shaik — Cybersecurity & SOC Analyst Portfolio
+# Mohammad Farooq Shaik — Cybersecurity & SOC Analyst Portfolio
 
-A professional, static portfolio website built with plain HTML5, CSS3, and
-JavaScript — no framework, no build step, no backend. Designed to present
-an IT Support background alongside hands-on cybersecurity learning, for
-SOC Analyst / Cybersecurity Analyst / Security Operations / IT Security
-roles.
+A static portfolio site built with plain HTML5, CSS3, and JavaScript — no
+framework, no build step, no backend. Content is based directly on the
+current resume: professional IT/ITSM experience, completed certification,
+and applied cybersecurity project work.
 
 ## File structure
 
@@ -12,10 +11,10 @@ roles.
 cybersecurity-portfolio/
 │
 ├── index.html          Full site content and structure
-├── style.css            All styling (dark security-dashboard theme)
-├── script.js             Mobile nav, scroll-reveal, active-link highlighting
+├── style.css             All styling (dark security-dashboard theme)
+├── script.js              Mobile nav, scroll-reveal, active-link highlighting
 ├── README.md
-├── resume.pdf            ← add your own resume here (see below)
+├── resume.pdf             ← add your resume PDF here (see below)
 └── assets/
     ├── favicon.svg
     └── og-cover.svg
@@ -23,37 +22,52 @@ cybersecurity-portfolio/
 
 ## Running locally
 
-No build step is required. Either:
+No build step is required.
 
 - Open `index.html` directly in a browser, or
-- Serve the folder with any static server, e.g.:
+- Serve the folder with any static server:
   ```bash
   npx serve .
   ```
 
 ## Adding your resume
 
-The "Download Resume" buttons link to `./resume.pdf`. To make them work:
+Both "Download Resume" buttons link to `/resume.pdf` (an absolute path
+from the site root). To make them work:
 
 1. Export your resume as a PDF.
 2. Name it exactly `resume.pdf`.
-3. Place it in the **root** of this repository (same level as `index.html`).
+3. Place it in the **root** of this repository, alongside `index.html`.
 4. Commit and push — no code changes are required.
 
-## Replacing placeholder contact details
+Until `resume.pdf` is added, the buttons will 404 rather than silently
+fail — add the file before sharing the link with recruiters.
 
-Open `index.html` and search for these placeholders:
+## Contact details already wired up
 
-- **Email** — currently `your-email@example.com`, used in two places
-  (the contact card `href="mailto:..."` and the visible text). Replace both
-  with your real email address.
-- **LinkedIn** — currently a placeholder link (`https://www.linkedin.com/`)
-  in the hero social icons and the contact section. Replace `href` with
-  your actual LinkedIn profile URL, and update the visible
-  `linkedin.com/in/your-profile` text to match.
-- **Project links** — each project card's GitHub button currently points
-  to `#`. Once a project has a real repository, replace the `href="#"`
-  with the actual GitHub URL.
+These are live in the site and do not need placeholders replaced:
+
+- **Email:** `s.mohammadfarooq96@gmail.com` (`mailto:` link)
+- **Phone:** `+971 55 817 2630` (`tel:` link)
+- **LinkedIn:** `linkedin.com/in/mohammad-farooq-shaik` (opens in a new tab)
+- **GitHub:** `github.com/farooqshaik94` (opens in a new tab)
+
+If any of these change, update the corresponding `href` in `index.html`
+(each contact method appears in the hero social row and again in the
+Contact section).
+
+## Adding real project repository links
+
+The Cybersecurity Projects and Security Labs sections currently describe
+the work without individual GitHub buttons, since no per-project
+repository URLs were provided. Once a project has its own public repo,
+add a button inside that project's `<article class="project-card">`:
+
+```html
+<div class="project-actions">
+  <a href="https://github.com/farooqshaik94/your-repo" class="btn btn--small" target="_blank" rel="noopener noreferrer">GitHub</a>
+</div>
+```
 
 ## Deploying to Vercel
 
@@ -69,7 +83,7 @@ Open `index.html` and search for these placeholders:
    - **Output Directory:** *(leave empty)*
    - **Install Command:** *(leave empty)*
    - **Root Directory:** `./`
-4. Click **Deploy**. Vercel will serve `index.html` from the repository root.
+4. Click **Deploy**. Vercel serves `index.html` from the repository root.
 
 ### Option B — Vercel CLI
 
@@ -82,25 +96,23 @@ Accept the defaults for a static project (no build command, no output directory)
 ### Redeploying after changes
 
 Any push to the connected branch (typically `main`) triggers an automatic
-redeploy. To redeploy manually without a new commit, open the project in
-the Vercel dashboard and use **Deployments → Redeploy**.
+redeploy. To redeploy manually, use **Deployments → Redeploy** in the
+Vercel dashboard.
 
-## Git commands to publish this repository
+## Git commands
 
-Run these from inside the project folder (the folder containing
-`index.html`):
+From inside the project folder (the folder containing `index.html`):
 
 ```bash
 git init
 git add .
-git commit -m "Add cybersecurity portfolio site"
+git commit -m "Rebuild portfolio from resume content"
 git branch -M main
 git remote add origin https://github.com/farooqshaik94/cybersecurity-portfolio.git
 git push -u origin main
 ```
 
-If the repository already has a `README.md` on GitHub (initial commit),
-pull first to avoid conflicts:
+If the remote already has commits (e.g. an initial README), pull first:
 
 ```bash
 git pull origin main --allow-unrelated-histories
@@ -108,22 +120,25 @@ git pull origin main --allow-unrelated-histories
 git push -u origin main
 ```
 
-## Notes on content accuracy
+## Content notes
 
-All experience, education, and skill labels reflect only what was
-provided when this site was built — no employers, certifications, dates,
-or achievements were invented. Skill levels are labelled (Fundamentals /
-Working Knowledge / Hands-on Learning / Strong Practical) rather than
-given fabricated percentage scores. Update `index.html` directly as
-skills, certifications, and projects progress.
+All experience, certification, education, and project content is taken
+directly from the resume supplied for this build — no employer, role,
+certification, project, or achievement has been invented. The Google
+Cybersecurity Professional Certificate is marked "Completed"; the
+Gulf Cement Company (GCC) role is presented as current professional
+experience (November 2025 – Present); the eight resume project entries
+are split across "Cybersecurity Projects" (Python automation, network
+traffic analysis, risk assessment) and "Security Labs & Technical Work"
+(Linux permissions, user/group management, ownership, incident and
+traffic log analysis).
 
 ## Accessibility & SEO
 
 - Semantic landmarks (`header`, `nav`, `main`, `section`, `footer`) and a
-  logical heading hierarchy (`h1` → `h2` → `h3`).
+  logical heading hierarchy.
 - Skip-to-content link, visible focus states, keyboard-operable navigation
   and mobile menu.
-- `prefers-reduced-motion` respected — animations are disabled for users
-  who request it.
+- `prefers-reduced-motion` respected.
 - Title, meta description, Open Graph tags, and an SVG favicon are set in
   `index.html`'s `<head>`.
