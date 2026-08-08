@@ -14,7 +14,7 @@ cybersecurity-portfolio/
 ├── style.css             All styling (dark security-dashboard theme)
 ├── script.js              Mobile nav, scroll-reveal, active-link highlighting
 ├── README.md
-├── resume.pdf             ← add your resume PDF here (see below)
+├── resume.pdf             ← already included, your actual resume
 └── assets/
     ├── favicon.svg
     └── og-cover.svg
@@ -30,18 +30,15 @@ No build step is required.
   npx serve .
   ```
 
-## Adding your resume
+## Resume
 
-Both "Download Resume" buttons link to `/resume.pdf` (an absolute path
-from the site root). To make them work:
-
-1. Export your resume as a PDF.
-2. Name it exactly `resume.pdf`.
-3. Place it in the **root** of this repository, alongside `index.html`.
-4. Commit and push — no code changes are required.
-
-Until `resume.pdf` is added, the buttons will 404 rather than silently
-fail — add the file before sharing the link with recruiters.
+`resume.pdf` is already included at the repository root and is your
+actual uploaded resume, unmodified. Both "Download Resume" buttons link
+to `/resume.pdf` (an absolute path from the site root), so as long as
+this file stays at the root alongside `index.html`, the buttons work as
+soon as the repo is deployed. If you ever update your resume, replace
+`resume.pdf` with the new file (same filename) and push — no code
+changes are required.
 
 ## Contact details already wired up
 
