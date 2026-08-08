@@ -1,143 +1,129 @@
-# Cybersecurity Portfolio
+# Farooq Shaik — Cybersecurity & SOC Analyst Portfolio
 
-Hi, I'm Farooq Shaik.
+A professional, static portfolio website built with plain HTML5, CSS3, and
+JavaScript — no framework, no build step, no backend. Designed to present
+an IT Support background alongside hands-on cybersecurity learning, for
+SOC Analyst / Cybersecurity Analyst / Security Operations / IT Security
+roles.
 
-I'm an IT professional transitioning into cybersecurity and SOC Analyst roles, with hands-on training in Linux, networking, Python security automation, security risk assessment, and incident analysis.
+## File structure
 
-## 🎯 Career Focus
+```
+cybersecurity-portfolio/
+│
+├── index.html          Full site content and structure
+├── style.css            All styling (dark security-dashboard theme)
+├── script.js             Mobile nav, scroll-reveal, active-link highlighting
+├── README.md
+├── resume.pdf            ← add your own resume here (see below)
+└── assets/
+    ├── favicon.svg
+    └── og-cover.svg
+```
 
-- SOC Analyst
-- Cybersecurity Analyst
-- Security Operations
-- IT Security / Security Support
+## Running locally
 
-## 🛡️ Cybersecurity Skills
+No build step is required. Either:
 
-- Linux fundamentals and command-line security
-- Networking fundamentals
-- TCP/IP, DNS, UDP and ICMP
-- Network traffic analysis
-- Python security automation
-- File and access-control management
-- Security risk assessment
-- Incident analysis and reporting
-- Security frameworks and controls
-- SQL fundamentals
+- Open `index.html` directly in a browser, or
+- Serve the folder with any static server, e.g.:
+  ```bash
+  npx serve .
+  ```
 
-## 🔬 Cybersecurity Projects
+## Adding your resume
 
-### 1. Python File Update Algorithm
-Python-based security automation project that updates an allow list of IP addresses by removing unauthorized addresses from a file.
+The "Download Resume" buttons link to `./resume.pdf`. To make them work:
 
-**Skills:** Python, file handling, loops, conditional logic, access control
+1. Export your resume as a PDF.
+2. Name it exactly `resume.pdf`.
+3. Place it in the **root** of this repository (same level as `index.html`).
+4. Commit and push — no code changes are required.
 
-### 2. Network Traffic Analysis
-Analyzed network traffic using tcpdump and investigated DNS, UDP and ICMP traffic to identify communication issues.
+## Replacing placeholder contact details
 
-**Skills:** Network analysis, tcpdump, DNS, UDP, ICMP, incident investigation
+Open `index.html` and search for these placeholders:
 
-### 3. Linux User & Permission Management
-Hands-on Linux administration lab covering user creation, groups, file ownership and permissions.
+- **Email** — currently `your-email@example.com`, used in two places
+  (the contact card `href="mailto:..."` and the visible text). Replace both
+  with your real email address.
+- **LinkedIn** — currently a placeholder link (`https://www.linkedin.com/`)
+  in the hero social icons and the contact section. Replace `href` with
+  your actual LinkedIn profile URL, and update the visible
+  `linkedin.com/in/your-profile` text to match.
+- **Project links** — each project card's GitHub button currently points
+  to `#`. Once a project has a real repository, replace the `href="#"`
+  with the actual GitHub URL.
 
-**Skills:** Linux, users/groups, chmod, chown, access control
+## Deploying to Vercel
 
-### 4. Security Risk Assessment
-Completed a security risk assessment covering organizational assets, security controls, scope, goals and compliance considerations.
+### Option A — Vercel dashboard (recommended)
 
-**Skills:** Risk assessment, security controls, NIST concepts, security governance
+1. Push this repository to `farooqshaik94/cybersecurity-portfolio` on GitHub
+   (see Git commands below).
+2. Go to [vercel.com/new](https://vercel.com/new) and import the
+   `farooqshaik94/cybersecurity-portfolio` repository.
+3. Use these exact settings:
+   - **Framework Preset:** Other / None
+   - **Build Command:** *(leave empty)*
+   - **Output Directory:** *(leave empty)*
+   - **Install Command:** *(leave empty)*
+   - **Root Directory:** `./`
+4. Click **Deploy**. Vercel will serve `index.html` from the repository root.
 
-### 5. Incident Report Analysis
-Created an incident analysis report based on network traffic evidence and documented findings, analysis and recommendations.
+### Option B — Vercel CLI
 
-**Skills:** Incident analysis, evidence analysis, network security, reporting
+```bash
+npm i -g vercel
+vercel
+```
+Accept the defaults for a static project (no build command, no output directory).
 
-## 🎓 Training
+### Redeploying after changes
 
-- Google Cybersecurity Professional Certificate
-- Hands-on Linux security labs
-- Network security and traffic analysis labs
-- Python security automation labs
-- Security risk assessment labs
+Any push to the connected branch (typically `main`) triggers an automatic
+redeploy. To redeploy manually without a new commit, open the project in
+the Vercel dashboard and use **Deployments → Redeploy**.
 
-## 💻 Technical Tools
+## Git commands to publish this repository
 
-Linux | Python | SQL | tcpdump | Wireshark | Git | GitHub
+Run these from inside the project folder (the folder containing
+`index.html`):
 
-## 📫 Contact
+```bash
+git init
+git add .
+git commit -m "Add cybersecurity portfolio site"
+git branch -M main
+git remote add origin https://github.com/farooqshaik94/cybersecurity-portfolio.git
+git push -u origin main
+```
 
-LinkedIn: [# Cybersecurity Portfolio
+If the repository already has a `README.md` on GitHub (initial commit),
+pull first to avoid conflicts:
 
-Hi, I'm Farooq Shaik.
+```bash
+git pull origin main --allow-unrelated-histories
+# resolve any conflicts, then:
+git push -u origin main
+```
 
-I'm an IT professional transitioning into cybersecurity and SOC Analyst roles, with hands-on training in Linux, networking, Python security automation, security risk assessment, and incident analysis.
+## Notes on content accuracy
 
-## 🎯 Career Focus
+All experience, education, and skill labels reflect only what was
+provided when this site was built — no employers, certifications, dates,
+or achievements were invented. Skill levels are labelled (Fundamentals /
+Working Knowledge / Hands-on Learning / Strong Practical) rather than
+given fabricated percentage scores. Update `index.html` directly as
+skills, certifications, and projects progress.
 
-- SOC Analyst
-- Cybersecurity Analyst
-- Security Operations
-- IT Security / Security Support
+## Accessibility & SEO
 
-## 🛡️ Cybersecurity Skills
-
-- Linux fundamentals and command-line security
-- Networking fundamentals
-- TCP/IP, DNS, UDP and ICMP
-- Network traffic analysis
-- Python security automation
-- File and access-control management
-- Security risk assessment
-- Incident analysis and reporting
-- Security frameworks and controls
-- SQL fundamentals
-
-## 🔬 Cybersecurity Projects
-
-### 1. Python File Update Algorithm
-Python-based security automation project that updates an allow list of IP addresses by removing unauthorized addresses from a file.
-
-**Skills:** Python, file handling, loops, conditional logic, access control
-
-### 2. Network Traffic Analysis
-Analyzed network traffic using tcpdump and investigated DNS, UDP and ICMP traffic to identify communication issues.
-
-**Skills:** Network analysis, tcpdump, DNS, UDP, ICMP, incident investigation
-
-### 3. Linux User & Permission Management
-Hands-on Linux administration lab covering user creation, groups, file ownership and permissions.
-
-**Skills:** Linux, users/groups, chmod, chown, access control
-
-### 4. Security Risk Assessment
-Completed a security risk assessment covering organizational assets, security controls, scope, goals and compliance considerations.
-
-**Skills:** Risk assessment, security controls, NIST concepts, security governance
-
-### 5. Incident Report Analysis
-Created an incident analysis report based on network traffic evidence and documented findings, analysis and recommendations.
-
-**Skills:** Incident analysis, evidence analysis, network security, reporting
-
-## 🎓 Training
-
-- Google Cybersecurity Professional Certificate
-- Hands-on Linux security labs
-- Network security and traffic analysis labs
-- Python security automation labs
-- Security risk assessment labs
-
-## 💻 Technical Tools
-
-Linux | Python | SQL | tcpdump | Wireshark | Git | GitHub
-
-## 📫 Contact
-
-LinkedIn: [https://www.linkedin.com/in/mohammad-farooq-shaik/]
-
-Email: [s.mohammadfarooq96@gmail.com]
-
-Portfolio: []]
-
-Email: [Add professional email]
-
-Portfolio: [https://github.com/farooqshaik94/cybersecurity-portfolio/tree/main]
+- Semantic landmarks (`header`, `nav`, `main`, `section`, `footer`) and a
+  logical heading hierarchy (`h1` → `h2` → `h3`).
+- Skip-to-content link, visible focus states, keyboard-operable navigation
+  and mobile menu.
+- `prefers-reduced-motion` respected — animations are disabled for users
+  who request it.
+- Title, meta description, Open Graph tags, and an SVG favicon are set in
+  `index.html`'s `<head>`.
