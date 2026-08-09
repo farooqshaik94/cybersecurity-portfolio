@@ -40,6 +40,12 @@ soon as the repo is deployed. If you ever update your resume, replace
 `resume.pdf` with the new file (same filename) and push — no code
 changes are required.
 
+Setup instructions like this used to be shown directly on the public
+Resume section of the site. They've been removed from `index.html` —
+visitors now only see "Download a copy of my current resume" and the
+button — and moved here instead, since developer/deployment notes
+shouldn't be visible to recruiters.
+
 ## Contact details already wired up
 
 These are live in the site and do not need placeholders replaced:
@@ -120,15 +126,27 @@ git push -u origin main
 ## Content notes
 
 All experience, certification, education, and project content is taken
-directly from the resume supplied for this build — no employer, role,
-certification, project, or achievement has been invented. The Google
-Cybersecurity Professional Certificate is marked "Completed"; the
-Gulf Cement Company (GCC) role is presented as current professional
-experience (November 2025 – Present); the eight resume project entries
-are split across "Cybersecurity Projects" (Python automation, network
-traffic analysis, risk assessment) and "Security Labs & Technical Work"
-(Linux permissions, user/group management, ownership, incident and
-traffic log analysis).
+directly from the resume and information supplied for this build — no
+employer, role, certification, project, or achievement has been
+invented. The Google Cybersecurity Professional Certificate is marked
+"Completed"; the Gulf Cement Company (GCC) role is presented as current
+professional experience (November 2025 – Present).
+
+Resume project entries are split across "Cybersecurity Projects" (Python
+automation, network traffic analysis, risk assessment — 3 cards) and
+"Security Labs & Technical Work" (Linux permissions, user/group
+management, ownership, incident analysis, traffic log analysis, and a
+SIEM & security log analysis fundamentals summary — 6 cards).
+
+Core Skills is organized into 7 categories, including a dedicated "SIEM
+& Log Analysis" category. SIEM is represented only as fundamentals/
+concepts (SIEM Fundamentals, Log Analysis, Event Correlation Concepts,
+etc.) — specific SIEM products (Wazuh, Splunk, Microsoft Sentinel,
+QRadar, Elastic Security, etc.) are deliberately NOT listed anywhere on
+the site, since hands-on experience with a named platform hasn't been
+confirmed. If that changes, add the specific tool to the "SIEM & Log
+Analysis" skill category and, if a lab was completed with it, to
+Security Labs & Technical Work — but only once confirmed.
 
 ## Accessibility & SEO
 
